@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import AddDirector from "./components/AddDirector";
+import AddMovie from "./components/AddMovie";
 
-function App() {
+import MoviesList from "./components/MoviesList";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div>
+      <div style={{ height: "50vh" }}>
+        <span
+          style={{
+            fontSize: "30px",
+            display: "flex",
+            justifyContent: "center",
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          Sourabh's Favourite Movies
+        </span>
+        <div>
+          <MoviesList />
+        </div>
+      </div>
+
+      <div>
+        <AddDirector />
+        <div style={{ height: "50vh", marginTop: '30px' }}>
+          <AddMovie />
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
